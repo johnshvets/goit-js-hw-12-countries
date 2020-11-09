@@ -43,6 +43,6 @@ function onFetchError(str) {
   error({
     text: str,
     delay: 1500,
-    width: '400px',
+    width: '500px',
   });
 }
