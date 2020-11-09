@@ -16,6 +16,7 @@ refs.searchCountriesInput.addEventListener(
 
 function onInputChange(e) {
   const searchQuery = e.target.value;
+  refs.countriesContainer.innerHTML = '';
 
   API(searchQuery)
     .then(setCountriesMarkup)
@@ -42,5 +43,6 @@ function onFetchError(str) {
   error({
     text: str,
     delay: 1500,
+    width: '400px',
   });
 }
