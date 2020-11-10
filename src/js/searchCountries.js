@@ -15,8 +15,12 @@ refs.searchCountriesInput.addEventListener(
 );
 
 function onInputChange(e) {
-  const searchQuery = e.target.value;
   refs.countriesContainer.innerHTML = '';
+  const searchQuery = e.target.value;
+
+  if (searchQuery === '') {
+    return;
+  }
 
   API(searchQuery)
     .then(setCountriesMarkup)
